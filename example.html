@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js'></script>
+    <script src='build/build.js'></script>
+    <script>
+      require('angular-enter-directive');
+      var mod = window.angular.module('my-app', ['ngEnter']);
+      mod.controller('Ctrl', function ($scope) {
+        $scope.doStuff = function (s) {
+          alert(s);
+        };
+      });
+    </script>
+  </head>
+
+  <body ng-app='my-app' ng-controller='Ctrl'>
+    <input type='text' ng-enter='doStuff("input")' />
+    <button ng-click='doStuff()'>click</button>
+  </body>
+
+</html>
