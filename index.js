@@ -1,6 +1,6 @@
-var module = window.angular.module('ngEnter', []);
+var mod = window.angular.module('ngEnter', []);
 
-module.directive('ngEnter', function () {
+mod.directive('ngEnter', function () {
 
   return function (scope, element, attrs) {
 
@@ -19,3 +19,5 @@ module.directive('ngEnter', function () {
   };
 
 });
+
+module.exports = 'ngEnter';
